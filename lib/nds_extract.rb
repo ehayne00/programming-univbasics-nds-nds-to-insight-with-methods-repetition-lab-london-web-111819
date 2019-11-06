@@ -36,10 +36,10 @@ def list_of_directors(source)
   array
 end
 
-def total_gross(directors_totals)
+def total_gross(result)
   
   total = 0
-  directors_totals.each_value do |gross|
+  result.each_value do |gross|
     
     total += gross
     
