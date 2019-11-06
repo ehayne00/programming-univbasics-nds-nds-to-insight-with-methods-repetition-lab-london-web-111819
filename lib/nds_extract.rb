@@ -1,5 +1,6 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require_relative './directors_database'
+require 'pry'
 
 def directors_totals(source)
   result = {}
@@ -36,6 +37,7 @@ def list_of_directors(source)
 end
 
 def total_gross(directors_totals)
+  binding.pry
   total = 0
   directors_totals.reduce(0) do |memo, (name, gross)|
     memo[name] = gross
