@@ -25,10 +25,24 @@ def gross_for_director(d)
 end
 
 def list_of_directors(source)
-  # Write this implementation
+  array = []
+  director_index = 0
+  while director_index < source.size do
+    director = source[director_index]
+    array.push(director) 
+    director_index += 1
+  end
+  array
 end
 
-def total_gross(source)
+def total_gross(directors_totals)
+  total = 0
+  directors_totals.reduce do |memo, (name, gross)|
+    memo = name[gross]
+    total += gross 
+  end
+  total
+end
   # Write this implementation
   #
   # Should use methods:
@@ -38,6 +52,6 @@ def total_gross(source)
   # Visit each key (i.e. director name), look up the value in the hash
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
-end
+
 
 
