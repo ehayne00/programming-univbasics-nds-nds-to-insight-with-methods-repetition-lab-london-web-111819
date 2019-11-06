@@ -39,8 +39,8 @@ end
 def total_gross(result)
   
   total = 0
-  result.each_value do |gross|
-    
+  result.reduce() do |name, gross|
+    result[name] = gross
     total += gross
     
   end
