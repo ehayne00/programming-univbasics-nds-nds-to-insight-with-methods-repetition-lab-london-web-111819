@@ -37,7 +37,7 @@ def list_of_directors(source)
 end
 
 def total_gross(directors_totals)
-  binding.pry
+  
   total = 0
   directors_totals.reduce(0) do |memo, (name, gross)|
     memo[name] = gross
