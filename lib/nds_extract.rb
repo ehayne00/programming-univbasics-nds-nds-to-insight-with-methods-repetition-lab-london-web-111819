@@ -36,11 +36,11 @@ def list_of_directors(source)
   array
 end
 
-def total_gross(result)
+def total_gross(directors_totals)
   
   total = 0
-  result.reduce() do |name, gross|
-    result[name] = gross
+  directors_totals.reduce() do |name, gross|
+    directors_totals[name] = gross
     total += gross
     
   end
