@@ -42,6 +42,7 @@ def total_gross(directors_totals)
   directors_totals.reduce(0) do |memo, (name, gross)|
     memo[name] = gross
     total += gross 
+    binding.pry
   end
   total
 end
