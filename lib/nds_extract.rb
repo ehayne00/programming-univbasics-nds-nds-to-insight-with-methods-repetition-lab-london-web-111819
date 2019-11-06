@@ -40,6 +40,7 @@ def total_gross(directors_totals)
   
   total = 0
   directors_totals.reduce() do |name, gross|
+    binding.pry
     directors_totals[name] = gross
     total += gross
     
