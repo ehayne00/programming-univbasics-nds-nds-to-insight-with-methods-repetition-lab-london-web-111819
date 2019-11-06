@@ -39,7 +39,7 @@ end
 def total_gross(directors_totals)
   
   total = 0
-  directors_totals.reduce(gross) do |names, gross|
+  directors_totals.reduce() do |names, gross|
     directors_totals[name] = gross
     total += gross
     
